@@ -1,12 +1,5 @@
 import React from 'react';
 
-function Food({name, picture}) {
-  return <div>
-    <h1>I Love {name}</h1>
-    <img src={picture} alt="food" />
-  </div>
-}
-
 const foodILike = [
   {
     name: "kimchi",
@@ -21,6 +14,13 @@ const foodILike = [
     image: "https://homecuisine.co.kr/files/attach/images/140/001/083/558d170258752df2dd76bef00861497f.JPG"
   },
 ]
+
+function Food({name, picture}) {
+  return <div>
+    <h1>I Love {name}</h1>
+    <img src={picture} alt={name} />
+  </div>
+}
 
 function App() {
   return (
